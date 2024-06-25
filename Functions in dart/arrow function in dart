@@ -1,0 +1,62 @@
+Arrow Function In Dart:
+    Dart has a special syntax for the function body, which is only one line. The arrow function is represented by => symbol. It is a shorthand syntax for any function that has only one expression.
+
+Syntax:
+    returnType functionName(parameters...) => expression;
+
+Note: The arrow function is used to make your code short.=> expr syntax is a shorthand for { return expr; }.
+
+Example 1: 
+Simple Interest Without Arrow Function
+
+    This program finds simple interest without using the arrow function.
+
+        // function that calculate interest
+        double calculateInterest(double principal, double rate, double time) {
+            double interest = principal * rate * time / 100;
+            return interest;
+        }
+
+        void main() {
+            double principal = 5000;
+            double time = 3;
+            double rate = 3;
+
+            double result = calculateInterest(principal, rate, time);
+            print("The simple interest is $result.");
+        }
+
+    Example 2:
+    Simple Interest With Arrow Function
+
+        This program finds simple interest using the arrow function.
+
+        // arrow function that calculate interest
+        double calculateInterest(double principal, double rate, double time) =>
+            principal * rate * time / 100;
+
+        void main() {
+            double principal = 5000;
+            double time = 3;
+            double rate = 3;
+
+            double result = calculateInterest(principal, rate, time);
+            print("The simple interest is $result.");
+        }
+
+    Example 3: 
+    Simple Calculation Using Arrow Function
+
+    This program finds the sum, difference, multiplication, and division of two numbers using the arrow function.
+
+        int add(int n1, int n2) => n1 + n2;
+        int sub(int n1, int n2) => n1 - n2;
+
+        void main() {
+            int num1 = 100;
+            int num2 = 30;
+
+            print("The sum is ${add(num1, num2)}");
+            print("The diff is ${sub(num1, num2)}");
+
+        }    

@@ -1,0 +1,33 @@
+INTRODUCTION TO DART
+
+Dart:
+Dart is a client-optimized, object-oriented, modern programming language to build apps fast for many platforms like android, iOS, web, desktop, etc. Client optimized means optimized for crafting a beautiful user interface and high-quality experiences. Google developed Dart as a programming language.
+
+Difference Between Dart & Flutter:
+Dart is a client optimized, object-oriented programming language. It is popular nowadays because of flutter. It is difficult to build complete apps only using Dart because you have to manage many things yourself.
+
+Flutter is a framework that uses dart programming language. With the help of flutter, you can build apps for android, iOS, web, desktop, etc. The framework contains ready-made tools to make apps faster.
+
+Basic Programming Terms
+Important words that you often hear while learning programming languages.
+
+Statements: A statement is a command that tells a computer to do something. In Dart, you can end most statements with a semicolon ;.
+
+Expressions: An Expression is a value or something that can be calculated as a value. The expression can be numbers, text, or some other type. For E.g.
+
+a. 52
+b. 5+5
+c. 'Hello World.'
+d. num
+
+Keywords: Keywords are reserved words that give special meaning to the dart compiler. For E.g. int, if, var, String, const, etc
+
+Identifiers: Identifiers are names created by the programmer to define variables, functions, classes, etc. Identifiers shouldn’t be keywords and must have a unique name. For E.g. int age =19;, here age is an identifier. You will learn more about identifiers later in this course.
+
+High-Level Programming Language: High-Level Programming Language is easy to learn, user-friendly, and uses English-like-sentence. For E.g. dart,c,java,etc.
+
+Low-Level Programming Language: Low-level programming language is hard to learn, non-user friendly, and deals with computer hardware components, e.g., machine and assembly language.
+
+Compiler: A compiler is a computer program that translates the high-level programming language into machine-level language.
+
+Syntax: The Syntax is a programming language’s pattern or rules that give the concept to code.

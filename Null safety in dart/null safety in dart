@@ -1,0 +1,128 @@
+Null Safety:
+    Null safety is a feature in the Dart programming language that helps developers to avoid null errors. This feature is called Sound Null Safety in dart. This allows developers to catch null errors at edit time.
+
+Advantage Of Null Safety:
+    - Write safe code.
+    - Reduce the chances of application crashes.
+    - Easy to find and fix bugs in code.
+
+    Note: Null safety avoids null errors, runtime bugs, vulnerabilities, and system crashes which are difficult to find and fix.
+
+
+Example 1: Using Null In Variables
+    In the example below, the variable age is a int type. If you pass a null value to this variable, it will give an error instantly.
+
+    void main() { 
+        int age = null; // give error
+    }
+
+    Show Output:
+    Error: Compilation failed.
+
+
+Problem With Null:
+    Programmers do have a lot of difficulties while handling null values. They forget that there are null values, so the program breaks. In real world null mostly acts as time bomb for programmers, which is ready to break the program.
+
+    Note: Common cause of errors in programming generally comes from not correctly handling null values.
+
+
+Non-Nullable By Default:
+    In Dart, variables and fields are non-nullable by default, which means that they cannot have a value null unless you explicitly allow it.
+
+    int productid = 20; // non-nullable
+    int productid = null; // give error
+
+
+How To Declare Null Value:
+    With dart sound null Safety, you cannot provide a null value by default. If you are 100% sure to use it, then you can use ? operator after the type declaration.
+
+    // Declaring a nullable variable by using ?
+    String? name;
+
+    This declares a variable name, which can be null or a string.
+
+
+How To Assign Values To Nullable Variables:
+    You can assign a value to nullable variables just like any other variable. However, you can also assign null to them.
+
+    void main(){
+        // Declaring a nullable variable by using ?
+        String? name;
+        // Assigning John to name
+        name = "John";
+        // Assigning null to name
+        name = null;
+    }
+
+
+How To Use Nullable Variables:
+    You can use nullable variables in many ways. Some of them are shown below:
+
+    - You can use if statement to check whether the variable is null or not.
+    - You can use ! operator, which returns null if the variable is null.
+    - You can use ?? operator to assign a default value if the variable is null.
+        
+        void main(){
+        // Declaring a nullable variable by using ?
+        String? name;
+        // Assigning John to name
+        name = "John";
+        // Assigning null to name
+        name = null;
+        // Checking if name is null using if statement
+        if(name == null){
+        print("Name is null");
+        }
+        // Using ?? operator to assign a default value
+        String name1 = name ?? "Stranger";
+        print(name1);
+        // Using ! operator to return null if name is null
+        String name2 = name!;
+        print(name2);
+        }    
+
+
+Example 2: Define List Of Nullable Items
+    You can also store null in list values. In this example, the items is a list of nullable integers. It can contain null values as well as integers.
+
+    void main() {
+        // list of nullable ints
+        List<int?> items = [1, 2, null, 4];
+        print(items);
+    }
+
+    Show Output:
+    [1, 2, null, 4]
+
+
+Example 3: Null Safety In Dart Functions
+    In this example, the function printAddress has a parameter address which is a String type. If you pass a null value to this function, it will give a edit-time error.
+
+    void printAddress(String address) {
+        print(address);
+    }
+
+    void main() {
+        printAddress(null); // give error
+    }
+
+    Show Output:
+    Error: Compilation failed.
+
+
+Example 4: Define Function With Nullable Parameter
+    If you are 100% sure, then you can use ? for the type declaration. In this example, the function printAddress has a parameter address, which is a String? type. You can pass both null and string values to this function.
+
+    // address is a nullable string
+        void printAddress(String? address) {
+        print(address);
+    }
+    void main() {
+        // Passing null to printAddress
+        printAddress(null); // Works
+    }
+
+    Show Output:
+    null
+
+    

@@ -1,0 +1,25 @@
+Class In Dart:
+    In object-oriented programming, a class is a blueprint for creating objects. A class defines the properties and methods that an object will have. For example, a class called Dog might have properties like breed, color and methods like bark, run.
+
+Declaring Class In Dart:
+    You can declare a class in dart using the class keyword followed by class name and braces {}. It’s a good habit to write class name in PascalCase. For example, Employee, Student, QuizBrain, etc.
+
+
+In this example below, there is class Animal with three properties: name, numberOfLegs, and lifeSpan. The class also has a method called display, which prints out the values of the three properties.
+
+    class Animal {
+    String? name;
+    int? numberOfLegs;
+    int? lifeSpan;
+
+    void display() {
+        print("Animal name: $name.");
+        print("Number of Legs: $numberOfLegs.");
+        print("Life Span: $lifeSpan.");
+    }
+    }
+    
+        Note: This program will not print anything because we have not created any object of the class. You will learn about the object later. The ? is used for null safety. You will also learn about null safety later.
+
+
+        

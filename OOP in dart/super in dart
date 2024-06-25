@@ -1,0 +1,73 @@
+What Is Super In Dart?
+    Super is used to refer to the parent class. It is used to call the parent class’s properties and methods.
+
+    Example 1: Super In Dart
+    In this example below, the show() method of the MacBook class calls the show() method of the parent class using the super keyword.
+
+    class Laptop {
+      // Method
+        void show() {
+            print("Laptop show method");
+        }
+    }
+
+    class MacBook extends Laptop {
+        void show() {
+            super.show(); // Calling the show method of the parent class
+            print("MacBook show method");
+        }
+    }
+
+    void main() {
+      // Creating an object of the MacBook class
+      MacBook macbook = MacBook();
+      macbook.show();
+    }
+
+    Example 2: Accessing Super Properties In Dart
+      In this example below, the display() method of the Tesla class calls the noOfSeats property of the parent class using the super keyword.
+
+    class Car {
+      int noOfSeats = 4;
+    }
+
+    class Tesla extends Car {
+      int noOfSeats = 6;
+
+      void display() {
+        print("No of seats in Tesla: $noOfSeats");
+        print("No of seats in Car: ${super.noOfSeats}");
+      }
+    }
+
+    void main() {
+      var tesla = Tesla();
+      tesla.display();
+    }
+
+
+    Example 4: Super With Named Constructor In Dart
+    In this example below, the Manager class named constructor calls the Employee class named constructor using the super keyword.
+
+    class Employee {
+      // Named constructor
+      Employee.manager() {
+        print("Employee named constructor");
+      }
+    }
+
+    class Manager extends Employee {
+      // Named constructor
+      Manager.manager() : super.manager() {
+        print("Manager named constructor");
+      }
+    }
+
+    void main() {
+      Manager manager = Manager.manager();
+    }
+
+     Show Output:
+      Employee named constructor
+      Manager named constructor
+      

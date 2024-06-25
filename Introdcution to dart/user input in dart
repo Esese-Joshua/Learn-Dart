@@ -1,0 +1,33 @@
+User Input In Dart:
+    Instead of writing hard-coded values, you can give input to the computer. It will make your program more dynamic. You must import the package import 'dart:io'; for user input.
+
+String User Input:
+    They are used for storing textual user input. If you want to keep values like somebody’s name, address, description, etc., you can take string input from the user.
+
+    E.g:        
+        import 'dart:io';
+
+        void main() {
+        print("Enter name:");
+        String? name  = stdin.readLineSync();
+        print("The entered name is ${name}");
+        }
+
+        Show Output
+        Enter name:
+        Raj Sharma
+        The entered name is Raj Sharma    
+
+Integer User Input:
+    You can take integer input to get a numeric value from the user without the decimal point. E.g. 10, 100, -800 etc.
+
+    E.g:        
+        import 'dart:io';
+
+        void main() {
+        print("Enter number:");
+        int? number = int.parse(stdin.readLineSync()!);
+        print("The entered number is ${number}");
+        }
+
+

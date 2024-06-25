@@ -1,0 +1,159 @@
+Dart Loops:
+    In Programming, loops are used to repeat a block of code until certain conditions are not completed. For, e.g., if you want to print your name 100 times, then rather than typing print(“your name”); 100 times, you can use a loop.
+
+There are different types of loop in Dart. They are:
+    For Loop:
+    Note: The primary purpose of all loops is to repeat a block of code.
+
+    Syntax:
+        for(initialization; condition; increment/decrement){
+            statements;
+        }
+
+
+Print Your Name 10 Times Using Loop
+
+We will learn for loop in the next section, paste the code and see the output. 
+
+    void main() {
+    for (int i = 0; i < 10; i++) {
+        print("John Doe");
+    }
+    }    
+
+    This will output your name 10 times.
+
+For Loop:
+    This is the most common type of loop. You can use for loop to run a code block multiple times according to the condition. The syntax of for loop is:
+
+    for(initialization; condition; increment/decrement){
+                statements;
+    }
+
+Example 2:
+    This example prints 1 to 10 using for loop. Here int i = 1; is initialization, i<=10 is condition and i++ is increment/decrement.
+
+    void main() {
+    for (int i = 1; i <= 10; i++) {
+        print(i);
+    }
+    }
+
+
+For Each Loop:
+    The for each loop iterates over all list elements or variables. It is useful when you want to loop through list/collection. The syntax of for-each loop is:
+
+    Syntax:
+        collection.forEach(void f(value));
+
+    This will print each name of football players:
+
+        void main(){
+        List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
+        footballplayers.forEach( (names)=>print(names));
+        }
+
+    Example 2: Print Each Total and Average Of Lists:
+        This program will print the total sum of all numbers and also the average value from the total.
+
+            void main(){
+            List<int> numbers = [1,2,3,4,5];
+            
+            int total = 0;
+            
+            numbers.forEach( (num)=>total= total+ num);
+            
+            print("Total is $total.");
+            
+            double avg = total / (numbers.length);
+            
+            print("Average is $avg.");
+            
+            }
+
+For In Loop In Dart:l
+
+    There is also another for loop, i.e., for in loop. It also makes looping over the list very easily.
+
+        void main(){
+            List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
+
+        for(String player in footballplayers){
+            print(player);
+        }
+
+How to Find Index Value Of List:
+    In dart, asMap method converts the list to a map where the keys are the index and values are the element at the index.
+
+        void main(){
+
+        List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
+
+        footballplayers.asMap().forEach((index, value) => print("$value index is $index"));
+
+        }
+        Show Output
+        Ronaldo index is 0
+        Messi index is 1
+        Neymar index is 2
+        Hazard index is 3
+
+
+While Loop:
+    Similarly to python, In while loop, the loop’s body will run until and unless the condition is true. You must write conditions first before statements. This loop checks conditions on every iteration. If the condition is true, the code inside {} is executed, if the condition is false, then the loop stops.
+
+Syntax:
+    while(condition){  
+        //statement(s);  
+        // Increment (++) or Decrement (--) Operation;  
+    }  
+
+    A while loop evaluates the condition inside the parenthesis ().
+    If the condition is true, the code inside {} is executed.
+    The condition is re-checked until the condition is false.
+    When the condition is false, the loop stops.
+   
+    Example 1: 
+        To Print 1 To 10 Using While Loop....
+
+            void main() {
+                int i = 1;
+                while (i <= 10) {
+                    print(i);
+                    i++;
+                }
+            }
+
+    Note: Do not forget to increase the variable used in the condition. Otherwise, the loop will never end and becomes an infinite loop.
+
+
+Do While Loop:
+    Do while loop is used to run a block of code multiple times. The loop’s body will be executed first, and then the condition is tested. The syntax of do while loop is:
+
+    do{
+        statement1;
+        statement2;
+        .
+        .
+        .
+        statementN;
+    }while(condition);
+
+    - First, it runs statements, and finally, the condition is checked.
+    - If the condition is true, the code inside {} is executed.
+    - The condition is re-checked until the condition is false.
+    - When the condition is false, the loop stops.
+    
+    Note: In a do-while loop, the statements will be executed at least once time, even if the condition is false. It is because the statement is executed before checking the condition.
+
+        Example 1:
+            To Print 1 To 10 Using Do While Loop:
+                void main() {
+                int i = 1;
+                do {
+                    print(i);
+                    i++;
+                } while (i <= 10);
+            }
+
+            

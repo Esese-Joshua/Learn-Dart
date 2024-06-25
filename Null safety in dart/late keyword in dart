@@ -1,0 +1,50 @@
+Late Keyword In Dart:
+In dart, late keyword is used to declare a variable or field that will be initialized at a later time. It is used to declare a non-nullable variable that is not initialized at the time of declaration.
+
+Example 1: Late Keyword In Dart
+In this example, name variable is declared as a late variable. The name variable is initialized in the main method.
+
+    // late variable
+    late String name;
+
+    void main() {
+        // assigning value to late variable
+        name = "John";
+        print(name);
+    }
+
+When you put late infront of a variable declearation, you tell Dart the following:
+
+    - Don’t assign that variable a value yet.
+    - You will assign value later.
+    - You will make sure the variable has a value before you use it.
+
+    Note: The late keyword is contract between you and Dart. You are telling Dart that you will assign a value to the variable before you use it. If you don’t assign a value to the variable before you use it, Dart will throw an error.
+
+Usecase of Late Keyword In Dart:
+Dart late keyword has two use cases:
+
+    - Declaring a non-nullable variable or field that is not initialized at the point of declaration.
+    - Lazy initialization of a variable or field.
+
+What Is Lazy Initialization
+Lazy initialization is a design pattern that delays the creation of an object, the calculation of a value, or some other expensive process until the first time you need it.
+
+    Note: Using late means dart doesn’t initialize value right away, it only initializes when you access it for the first time. This is also called lazy loading.
+
+Example 3: Late Keyword In Dart
+In this example, the provideCountry function is not called when the value variable is declared. The provideCountry function is called only when the value variable is used. Lazy initialization is used to avoid unnecessary computation.
+
+// function
+String provideCountry() {
+print("Function is called");
+return "USA";
+}
+
+void main() {
+print("Starting");
+// late variable
+late String value = provideCountry();
+print("End");
+print(value);
+}

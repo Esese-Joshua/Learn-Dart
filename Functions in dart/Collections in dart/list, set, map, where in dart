@@ -1,0 +1,109 @@
+List In Dart:
+    If you want to store multiple values in the same variable, you can use List. List in dart is similar to Arrays in other programming languages. E.g. to store the names of multiple students, you can use a List. The List is represented by Square Braces[].
+
+How To Create List:
+    You can create a List by specifying the initial elements in a square bracket. Square bracket [] is used to represent a List.
+
+        // Integer List
+        List<int> ages = [10, 30, 23];
+
+        // String List
+        List<String> names = ["Raj", "John", "Rocky"];
+
+        // Mixed List
+        var mixed = [10, "John", 18.8];
+
+
+Set In Dart:
+    Set is a unique collection of items. You cannot store duplicate values in the Set. It is unordered, so it can be faster than lists while working with a large amount of data. Set is useful when you need to store unique values without considering the order of the input. E.g., fruits name, months name, days name, etc. It is represented by Curley Braces{}.
+
+    Note:
+    The list allows you to add duplicate items, but the Set doesn’t allow it.
+
+    You can create a Set in Dart using the Set type annotation. Here Set<String> means only text is allowed in the Set.
+
+        void main(){
+            Set<String> fruits = {"Apple", "Orange", "Mango"};
+            print(fruits);
+        }
+
+Set Properties In DartL:
+    Properties	|   Work
+    first	    |   To get first value of Set.
+    last	    |   To get last value of Set.
+    isEmpty	    |   Return true or false.
+    isNotEmpty  | 	Return true or false.
+    length	    |   It returns the length of the Set.
+
+
+    Example of Set Properties Dart:        
+        This example finds the first and last element of the Set, checks whether it is empty or not, and finds its length.
+
+    void main() {
+        // declaring fruits as Set
+        Set<String> fruits = {"Apple", "Orange", "Mango", "Banana"};
+
+        // using different properties of Set
+        print("First Value is ${fruits.first}");
+        print("Last Value is ${fruits.last}");
+        print("Is fruits empty? ${fruits.isEmpty}");
+        print("Is fruits not empty? ${fruits.isNotEmpty}");
+        print("The length of fruits is ${fruits.length}");
+    }
+
+
+Add & Remove Items In Set:
+    Like lists, you can add or remove items in a Set. To add items use add() method and to remove use remove() method.
+
+    Method  |	Description
+    add()   |	Add one element to Set.
+    remove()    |	Removes one element from Set.    
+
+Adding Multiple Elements:
+    You can use addAll() method to add multiple elements from the list to Set.
+
+    Method    |     Description
+    addAll()  |  	Insert the multiple values to the given Set.
+
+
+        void main(){
+            Set<int> numbers = {10, 20, 30};
+                numbers.addAll([40,50]);
+            print("After adding 40 and 50: $numbers");
+        }   
+
+
+Map In Dart:
+    In a Map, data is stored as keys and values. In Map, each key must be unique. They are similar to HashMaps and Dictionaries in other languages.
+
+How To Create Map In Dart:
+    Here we are creating a Map for String and String. It means keys and values must be the type of String. You can create a Map of any kind as you like.        
+
+    void main(){
+    Map<String, String> countryCapital = {
+        'USA': 'Washington, D.C.',
+        'India': 'New Delhi',
+        'China': 'Beijing'
+    };
+        print(countryCapital);
+    }
+
+    Note: Here Usa, India, and China are keys, and it must be unique.
+
+
+Where in dart:
+    You can use where in list, set, map to filter specific items. It returns a new list containing all the elements that satisfy the condition. This is also called Where Filter in dart. Let’s see the syntax below:
+
+    Example 1: 
+    Filter Only Odd Number From List
+
+        In this example, you will get only odd numbers from a list.
+
+        void main() {
+            List<int> numbers = [2, 4, 6, 8, 10, 11, 12, 13, 14];
+
+            List<int> oddNumbers = numbers.where((number) => number.isOdd).toList();
+            print(oddNumbers);
+        }
+
+        

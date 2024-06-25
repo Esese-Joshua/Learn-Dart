@@ -1,0 +1,98 @@
+Introduction:
+    In this section, you will learn about inheritance of constructor in Dart programming language with the help of examples. Before learning about inheritance of constructor in Dart, you should have a basic understanding of the constructor and inheritance in Dart.
+
+What Is Inheritance Of Constructor In Dart?
+    Inheritance of constructor in Dart is a process of inheriting the constructor of the parent class to the child class. It is a way of reusing the code of the parent class.
+
+
+Constructor In Dart:
+    In this example below, there is class named Laptop with a constructor. There is another class named MacBook which extends the Laptop class. The MacBook class has its own constructor.
+
+    class Laptop {
+        // Constructor
+        Laptop() {
+            print("Laptop constructor");
+        }
+    }
+
+    class MacBook extends Laptop {
+        // Constructor
+        MacBook() {
+            print("MacBook constructor");
+        }
+    }
+
+    void main() {
+         macbook = MacBook();
+    }
+    
+    Show Output:
+    Laptop constructor
+    MacBook constructor
+
+    Note: The constructor of the parent class is called first and then the constructor of the child class is called.
+
+
+Example 2: Inheritance Of Constructor With Parameters In Dart
+    In this example below, there is class named Laptop with a constructor with parameters. There is another class named MacBook which extends the Laptop class. The MacBook class has its own constructor with parameters.
+
+    class Laptop {
+        // Constructor
+        Laptop(String name, String color) {
+            print("Laptop constructor");
+            print("Name: $name");
+            print("Color: $color");
+        }
+    }
+
+    class MacBook extends Laptop {
+        // Constructor
+        MacBook(String name, String color) : super(name, color) {
+            print("MacBook constructor");
+        }
+    }
+
+    void main() {
+        var macbook = MacBook("MacBook Pro", "Silver");
+    }
+
+    Show Output:
+    Laptop constructor
+    Name: MacBook Pro
+    Color: Silver
+    MacBook constructor
+
+
+
+Example 3: Inheritance Of Constructor
+    In this example below, there is class named Person with properties name and age. There is another class named Student which extends the Person class. The Student class has additional property rollNumber. Lets see how to create a constructor for the Student class.
+
+    class Person {
+        String name;
+        int age;
+
+        // Constructor
+        Person(this.name, this.age);
+        }
+
+    class Student extends Person {
+        int rollNumber;
+
+        // Constructor
+        Student(String name, int age, this.rollNumber) : super(name, age);
+    }
+
+    void main() {
+        var student = Student("John", 20, 1);
+        print("Student name: ${student.name}");
+        print("Student age: ${student.age}");
+        print("Student roll number: ${student.rollNumber}");
+
+    }    
+
+    Show Output
+    Student name: John
+    Student age: 20
+    Student roll number: 1
+
+    

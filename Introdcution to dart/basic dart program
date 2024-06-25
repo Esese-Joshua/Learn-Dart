@@ -1,0 +1,45 @@
+Basic Dart Program For Printing Name
+void main()
+{
+    var name = "John";
+    print(name);
+}
+
+Basic Dart Program Explained:
+    void main() is the starting point where the execution of your program begins.
+
+    Every program starts with a main function.
+    
+    The curly braces {} represent the beginning and the ending of a block of code.
+
+    Each code statement must end with a semicolon.
+
+Dart Program To Join One Or More Variables:
+    Here $variableName is used to join variables. This joining process in dart is called string interpolation.
+
+void main(){
+  var firstName = "John";
+  var lastName = "Doe";
+  print("Full name is $firstName $lastName");
+}
+
+Dart Program For Basic Calculation:
+Performing addition, subtraction, multiplication, and division in dart.
+
+void main() {
+int num1 = 10; //declaring number1
+int num2 = 3; //declaring number2
+  
+// Calculation
+int sum = num1 + num2;
+int diff = num1 - num2;
+int mul = num1 * num2;
+double div = num1 / num2; // It is double because it outputs number with decimal.
+  
+// displaying the output
+print("The sum is $sum");
+print("The diff is $diff");
+print("The mul is $mul");
+print("The div is $div");
+}
+

@@ -1,0 +1,55 @@
+Type Promotion In Dart
+    Type promotion in dart means that dart automatically converts a value of one type to another type. Dart does this when it knows that the value is of a specific type.
+
+How Type Promotion Works In Dart?
+    Types Promotion in Dart works in the following ways:
+
+    - Promoting from general types to specific subtypes.
+    - Promoting from nullable types to non-nullable types.  
+
+
+Example 1: Promoting From General Types To Specific Subtypes
+    In this example, the variable name is declared as an Object. The Object class doesn’t have a .length property. Variable name gets promoted from Object to String so that you can access the .length property of the String class.
+
+    void main(){
+    Object name = "Pratik";
+    // print(name.length) will not work because Dart doesn't know that name is a String
+
+    if(name is String) {
+    // name promoted from Object to String
+    print("The length of name is ${name.length}");
+    }
+    }    
+
+
+Example 4: Type Promotion With Nullable Type To Non-Nullable Type
+    In this example, the variable value contains a value of type String or null. The variable value is promoted to a non-nullable type String in the if block. If the variable value is null, then the else block is executed.
+
+// importing dart:math library
+import 'dart:math';
+// creating a class DataProvider
+class DataProvider{
+    // creating a method stringorNull
+    String? get stringorNull => Random().nextBool() ? "Hello" : null;
+
+    // creating a method myMethod
+    void myMethod(){
+        String? value = stringorNull;
+        // checking if value String or not
+        if(value is String){
+            print("The length of value is ${value.length}");
+        }else{
+            print("The value is not string.");
+        }
+
+    }
+}
+// main method
+void main() {
+    DataProvider().myMethod();
+}
+
+Show Output:
+The length of value is 5
+ 
+Note: The output of the above example is random. It can be either The length of value is 5 or The value is not string.    

@@ -1,0 +1,26 @@
+Create Full Dart Project:
+
+dart create <project_name>
+This will create a simple dart project with some ready-made code.
+
+Steps To Create Dart Project:
+Open folder location on command prompt/terminal.
+
+    Type dart create project_name (For E.g. dart create first_app)
+
+    Type cd first_app
+
+    Type code . to open project with visual studio code
+
+    To check the main dart file go to bin/first_app.dart and edit your code.
+
+Run Dart Project:
+First, open the project location on the command/terminal and run the project with this command.
+
+    dart run
+
+Convert Dart Code To Javascript:
+Command:
+dart compile js filename.dart
+Description:  
+ Compile dart to javascript. You can run this file with Node.js.

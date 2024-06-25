@@ -1,0 +1,60 @@
+Getter In Dart:
+    Getter is used to get the value of a property. It is mostly used to access a private property’s value. Getter provide explicit read access to an object properties.
+
+    Syntax:
+        return_type get property_name {
+        // Getter body
+        }
+        
+    Note: Instead of writing { } after the property name, you can also write => (fat arrow) after the property name.
+
+
+Example: Getter in Dart 
+    In this example below, there is a class named Person. The class has two properties firstName and lastName. There is getter fullName which is responsible to get full name of person.
+
+
+    class Person {
+        // Properties
+        String? firstName;
+        String? lastName;
+
+        // Constructor
+        Person(this.firstName, this.lastName);
+
+        // Getter
+        String get fullName => "$firstName $lastName";
+        }
+
+    void main() {
+    Person p = Person("John", "Doe");
+    p+rint(p.fullName);
+    }
+
+
+Example 2:
+    In this example below, there is a class named NoteBook. The class has two private properties _name and _prize. There are two getters name and price to access the value of the properties.
+
+    class NoteBook {
+        // Private properties
+        String? _name;
+        double? _prize;
+
+        // Constructor
+        NoteBook(this._name, this._prize);
+
+        // Getter method to access private property _name
+        String get name => this._name!;
+
+        // Getter method to access private property _prize
+        double get price => this._prize!;
+        }
+
+    void main() {
+        // Create an object of NoteBook class
+        NoteBook nb = new NoteBook("Dell", 500);
+        // Display the values of the object
+        print(nb.name);
+        print(nb.price);
+    }
+
+    

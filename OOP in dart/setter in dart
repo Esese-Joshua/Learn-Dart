@@ -1,0 +1,99 @@
+Setter In Dart:
+    Setter is used to set the value of a property. It is mostly used to update a private property’s value. Setter provide explicit write access to an object properties.
+
+    Syntax:
+    set property_name (value) {
+    // Setter body
+    }
+ 
+    Note: Instead of writing { } after the property name, you can also write => (fat arrow) after the property name.
+
+
+Example:
+    In this example below, there is a class named NoteBook. The class has two private properties _name and _prize. There are two setters name and price to update the value of the properties. There is also a method display to display the value of the properties.
+
+    class NoteBook {
+        // Private Properties
+        String? _name;
+        double? _prize;
+
+        // Setter to update private property _name
+        set name(String name) => this._name = name;
+
+        // Setter to update private property _prize
+        set price(double price) => this._prize = price;
+
+        // Method to display the values of the properties
+        void display() {
+            print("Name: ${_name}");
+            print("Price: ${_prize}");
+            }
+    }
+
+    void main() {
+        // Create an object of NoteBook class
+        NoteBook nb = new NoteBook();
+        // setting values to the object using setter
+        nb.name = "Dell";
+        nb.price = 500.00;
+        // Display the values of the object
+        nb.display();
+    }
+
+    Show Output:
+    Name: Dell
+    Price: 500.0
+
+    Note: In the above example, a setter name and price are used to update the value of the properties _name and _prize.
+
+
+Example 2: Setter In Dart With Data Validation
+    In this example, there is a class named NoteBook. The class has two private properties _name and _prize. If the value of _prize is less than 0, we will throw an exception. There are also two setters name and price to update the value of the properties. The class also has a method display() to display the values of the properties.
+
+    class NoteBook {
+        // Private properties
+        String? _name;
+        double? _prize;
+
+        // Setter to update the value of name property
+        set name(String name) => _name = name;
+
+        // Setter to update the value of price property
+        set price(double price) {
+            if (price < 0) {
+            throw Exception("Price cannot be less than 0");
+            }
+            this._prize = price;
+        }
+
+        // Method to display the values of the properties
+        void display() {
+            print("Name: $_name");
+            print("Price: $_prize");
+        }
+    }
+
+    void main() {
+        // Create an object of NoteBook class
+        NoteBook nb = new NoteBook();
+        // setting values to the object using setter
+        nb.name = "Dell";
+        nb.price = 250;
+
+        // Display the values of the object
+        nb.display();
+    }
+
+    Show Output:
+    Name: Dell
+    Price: 500.0
+
+    Note: It is generally best to not allow the user to set the value of a field directly. Instead, you should provide a setter method that can validate the value before setting it. This is very important when working on large and complex programs.
+
+
+Why Is Setter Important?
+    - It is used to set the value of a private property.
+    - It is also used for data validation.
+    - It gives you better control over the data.
+
+    

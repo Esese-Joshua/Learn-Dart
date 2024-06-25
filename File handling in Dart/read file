@@ -1,0 +1,41 @@
+Read File In Dart:
+    Assume that you have a file named test.txt in the same directory of your dart program.
+
+    Welcome to test.txt file.
+    This is a test file.
+    
+Now, you can read this file using File class and readAsStringSync() method.
+
+// dart program to read from file
+    import 'dart:io';
+
+    void main() {
+    // creating file object
+    File file = File('test.txt');
+    // read file
+    String contents = file.readAsStringSync();
+    // print file
+    print(contents);
+    }
+
+
+Get File Information:
+  In this example below, you will learn how to get file information like file location, file size, and last modified time.
+
+    import 'dart:io';
+
+    void main() {
+      // open file
+      File file = File('test.txt');
+      // get file location
+      print('File path: ${file.path}');
+      // get absolute path
+      print('File absolute path: ${file.absolute.path}');
+      // get file size
+      print('File size: ${file.lengthSync()} bytes');
+      // get last modified time
+      print('Last modified: ${file.lastModifiedSync()}');
+    }
+
+    Note: If you try to get information of a file that does not exist, then it will throw an exception.
+

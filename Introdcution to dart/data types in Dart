@@ -1,0 +1,142 @@
+Data Types:
+Data types help you to categorize all the different types of data you use in your code. For e.g. numbers, texts, symbols, etc. The data type specifies what type of value will be stored by the variable. Each variable has its data type. Dart supports the following built-in data types :
+
+    Num: int, double, num	It represents numeric values
+    String: It represents a sequence of characters
+    bool: it represents Boolean values true and false
+    List: It is an ordered group of items
+    Map: it represents a set of values as key-value pairs
+    Set: It is an unordered list of unique values of same types
+    runes: It represents Unicode values of String
+    null: represents null value
+
+Create A Multi-Line String In Dart:
+    If you want to create a multi-line String in dart, then you can use triple quotes with either single or double quotation marks.
+
+    void main() {
+    // Multi Line Using Single Quotes   
+    String multiLineText = '''
+    This is Multi Line Text
+    with 3 single quote
+    I am also writing here.
+    ''';
+
+Special Character In String:
+    Special Character   |	Work
+    \n	                |   New Line
+    \t	                |   Tab
+
+    void main() {
+    
+    // Using \n and \t   
+    print("I am from \nUS.");
+    print("I am from \tUS.");
+    }
+    
+    Show Output:
+    Special Character   |	Work
+    I am from           |   I am from 	US.
+    US.
+    
+
+Convert String To Int In Dart:
+    You can convert String to int using int.parse() method. The method takes String as an argument and converts it into an integer.
+
+    void main() {
+    String strvalue = "1";
+    print("Type of strvalue is ${strvalue.runtimeType}");   
+    int intvalue = int.parse(strvalue);
+    print("Value of intvalue is $intvalue");
+    // this will print data type
+    print("Type of intvalue is ${intvalue.runtimeType}");
+    }
+    
+    Show Output
+    Type of strvalue is String
+    Value of intvalue is 1
+    Type of intvalue is int
+
+Convert String To Double In Dart:    
+    You can do the same logic as above to achieve this, but....
+
+        void main() {
+        String strvalue = "1.1";
+        print("Type of strvalue is ${strvalue.runtimeType}");
+        double doublevalue = double.parse(strvalue);
+        print("Value of doublevalue is $doublevalue");
+        // this will print data type
+        print("Type of doublevalue is ${doublevalue.runtimeType}");
+        }     
+
+Convert Int To String In Dart:
+    You can convert int to String using the toString() method. Here is example:
+
+    void main() {
+    int one = 1;
+    print("Type of one is ${one.runtimeType}");
+    String oneInString = one.toString(); 
+    print("Value of oneInString is $oneInString");
+    // this will print data type
+    print("Type of oneInString is ${oneInString.runtimeType}");
+    }        
+
+Lists:
+    The list holds multiple values in a single variable. It is also called arrays. If you want to store multiple values without creating multiple variables, you can use a list.
+
+    void main() {
+    List<String> names = ["Raj", "John", "Max"];
+    print("Value of names is $names");
+    print("Value of names[0] is ${names[0]}");    
+
+Sets:
+    An unordered collection of unique items is called set in dart. You can store unique data in sets.
+
+    Info
+    Note: Set doesn’t print duplicate items.
+
+    void main() {
+    Set<String> weekday = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+    print(weekday);
+    }
+
+Maps:
+    In Dart, a map is an object where you can store data in key-value pairs. Each key occurs only once, but you can use same value multiple times.
+
+    void main() {
+    Map<String, String> myDetails = {
+    'name': 'John Doe',
+    'address': 'USA',
+    'fathername': 'Soe Doe'
+    };
+    // displaying the output
+    print(myDetails['name']);
+    }
+    
+    Show Output
+    John Doe
+
+Runes In Dart:
+    With runes, you can find Unicode values of String. The Unicode value of a is 97, so runes give 97 as output.
+
+    void main() {
+
+    String value = "a";
+    print(value.runes);
+    }
+    
+    Show Output
+    (97)
+
+How To Check Runtime Type:
+    You can check runtime type in dart with .runtimeType after the variable name.    
+
+    void main() { 
+    var a = 10;
+    print(a.runtimeType); 
+    print(a is int); // true
+    }
+    
+    Show Output
+    int
+    true
+

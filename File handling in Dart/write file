@@ -1,0 +1,61 @@
+Add New Content To Previous Content:
+    You can use FileMode.append to add new content to previous content. Assume that test.txt file already contains some text.
+
+        Welcome to test.txt file.
+            
+    Now, let’s add new content to it.
+
+    // dart program to write to existing file
+    import 'dart:io';
+
+    void main() {
+    // open file
+    File file =  File('test.txt');
+    // write to file
+    file.writeAsStringSync('\nThis is a new content.', mode: FileMode.append);
+    print('Congratulations!! New content is added on top of previous content.');
+    }
+    Show Output
+    Congratulations!! New content is added on top of previous content.
+
+
+Write CSV File In Dart:
+    In the example below, we will ask user to enter name and phone of 3 students and write it to a csv file named students.csv.    
+
+    // dart program to write to csv file
+    import 'dart:io';
+
+    void main() {
+    // open file
+    File file = File("students.csv");
+    // write to file
+    file.writeAsStringSync('Name,Phone\n');
+    for (int i = 0; i < 3; i++) {
+        // user input name
+        stdout.write("Enter name of student ${i + 1}: ");
+        String? name = stdin.readLineSync();
+        stdout.write("Enter phone of student ${i + 1}: ");
+        // user input phone
+        String? phone = stdin.readLineSync();
+        file.writeAsStringSync('$name,$phone\n', mode: FileMode.append);
+    }
+    print("Congratulations!! CSV file written successfully.");
+    }
+
+    Show Output:
+    Enter name of student 1: John 
+    Enter phone of student 1: 1234567890
+    Enter name of student 2: Mark
+    Enter phone of student 2: 0123456789
+    Enter name of student 3: Elon
+    Enter phone of student 3: 0122112322
+    Congratulations!! CSV file written successfully.
+    
+    students.csv file will look like this:
+    Name,Phone
+    John,1234567890
+    Mark,0123456789
+    Elon,0122112322
+
+
+    

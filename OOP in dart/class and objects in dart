@@ -1,0 +1,32 @@
+What is Class:
+    A class is a blueprint for creating objects. A class defines the properties and methods that an object will have. If you want to learn more about class in Dart, you can read class in dart.
+
+What is Object:
+    An object is an instance of a class. You can create multiple objects of the same class. If you want to learn more about an object in Dart, you can read object in dart.
+
+Example Of A Class & Object In Dart:
+    In this example below there is class Animal with three properties: name, numberOfLegs, and lifeSpan. The class also has a method called display, which prints out the values of the three properties.
+
+    class Animal {
+    String? name;
+    int? numberOfLegs;
+    int? lifeSpan;
+
+    void display() {
+        print("Animal name: $name.");
+        print("Number of Legs: $numberOfLegs.");
+        print("Life Span: $lifeSpan.");
+    }
+    }
+
+    void main(){
+    // Here animal is object of class Animal. 
+    Animal animal = Animal();
+    animal.name = "Lion";
+    animal.numberOfLegs = 4;
+    animal.lifeSpan = 10;
+
+    animal.display();
+    }
+
+    

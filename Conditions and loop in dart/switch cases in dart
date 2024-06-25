@@ -1,0 +1,11 @@
+Switch Case In Dart:
+    In this tutorial, you will learn to use dart switch case to control your program’s flow. A Switch case is used to execute the code block based on the condition.
+
+
+How does switch-case statement work in dart:
+    The expression is evaluated once and compared with each case value.
+    If expression matches with case value1, the statements of case value1 are executed. Similarly, case value 2 will be executed if the expression matches case value2. If the expression matches the case value3, the statements of case value3 are executed. The break keywords tell dart to exit the switch statement because the statements in the case block are finished. If there is no match, default statements are executed.
+
+        Note: You can use a Switch case as an alternative to the if-else-if condition.
+
+        

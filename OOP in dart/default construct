@@ -1,0 +1,55 @@
+Default Constructor:
+    The constructor which is automatically created by the dart compiler if you don’t create a constructor is called a default constructor. A default constructor has no parameters. A default constructor is declared using the class name followed by parentheses ().
+
+Default Constructor In Dart:
+    In this example below, there is a class Laptop with two properties: brand, and price. Lets create constructor with no parameter and print something from the constructor. We also have an object of the class Laptop called laptop.
+
+    class Laptop {
+        String? brand;
+        int? price;
+
+    // Constructor
+    Laptop() {
+        print("This is a default constructor");
+    }
+    }
+
+    void main() {
+    // Here laptop is object of class Laptop.
+    Laptop laptop = Laptop();
+    }
+
+    Show Output
+    This is a default constructor
+
+    Note: The default constructor is called automatically when you create an object of the class. It is used to initialize the instance variables of the class.
+
+Default Constructor In Dart:
+    In this example below, there is a class Student with four properties: name, age, schoolname and grade. The default constructor is used to initialize the values of the school name. The reason for this is that the school name is the same for all the students. We also have an object of the class Student called student. The default constructor is called automatically when you create an object of the class.
+
+class Student {
+  String? name;
+  int? age;
+  String? schoolname;
+  String? grade;
+
+  // Default Constructor
+  Student() {
+    print(
+        "Constructor called"); // this is for checking the constructor is called or not.
+    schoolname = "ABC School";
+  }
+}
+
+void main() {
+  // Here student is object of class Student.
+  Student student = Student();
+  student.name = "John";
+  student.age = 10;
+  student.grade = "A";
+  print("Name: ${student.name}");
+  print("Age: ${student.age}");
+  print("School Name: ${student.schoolname}");
+  print("Grade: ${student.grade}");
+}
+
